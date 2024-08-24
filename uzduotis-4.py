@@ -22,14 +22,14 @@ Enter one of the following options:
 
 match math_operation:
     case "+":
-        print(a + b)
+        print(f'Addition result: {a + b}')
     case "-":
-        print(a - b)
+        print(f'Subtraction result: {a - b}')
     case "*":
-        print(a * b)
+        print(f'Multiplication result: {a * b}')
     case "/":
-        print(a / b)
+        print(f'Division result: {a / b}')
     case "%":
-        print(a % b)
+        print(f'Remainder: {a % b}')
     case _:
         print("Such action does not exist")
