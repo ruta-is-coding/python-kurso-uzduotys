@@ -13,7 +13,6 @@ words = []
 
 # for i in range(5):
 #     word = input("Enter a word: ")
-#     words.append(word)
 #     print(f"Your word is: {word}, it has a length of: {len(word)}, it's sequence number is {i + 1}")
 
 while True:
