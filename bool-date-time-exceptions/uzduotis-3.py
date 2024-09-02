@@ -11,8 +11,8 @@ Patarimas: naudoti datetime, .days, .total_seconds()
 import datetime
 
 while True:
+    datetime_input = input("Įveskite datą ir laiką YYYY-MM-DD H:M formatu: ")
     try:
-        datetime_input = input("Įveskite datą ir laiką YYYY-MM-DD H:M formatu: ")
         formatted_datetime = datetime.datetime.strptime(datetime_input, "%Y-%m-%d %H:%M")
         break
     except ValueError:
