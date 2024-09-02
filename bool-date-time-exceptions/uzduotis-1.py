@@ -16,7 +16,4 @@ while True:
 
 ar_skaicius_teigiamas = skaicius > 0
 
-if ar_skaicius_teigiamas:
-    print(True)
-else:
-    print(False)
+print(ar_skaicius_teigiamas)

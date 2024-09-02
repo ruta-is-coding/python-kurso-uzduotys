@@ -17,4 +17,4 @@ print(current_datetime - datetime.timedelta(days=5))
 
 print(current_datetime + datetime.timedelta(hours=8))
 
-print(current_datetime.strftime("%Y %m %d, %H:%M:%S"))
+print(current_datetime.strftime("%Y %m %d, %X"))

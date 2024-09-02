@@ -22,11 +22,11 @@ difference = datetime.datetime.today() - formatted_datetime
 
 days = difference.days
 seconds = round(difference.total_seconds())
-years = round(days / 365)
-months = round(days / 30)
-minutes = round(seconds / 60)
-hours = round(minutes / 60)
+years = round(days // 365)
+months = round(years * 12)
+minutes = round(seconds // 60)
+hours = round(minutes // 60)
 
-print(f"Nuo jūsų įvestos datos ir laiko praėjo {years} metai, {months} mėnesiai, {days} dienos, {hours} valandos, "
-      f"{minutes} minutės ir {seconds} sekundės.")
+print(f"Nuo jūsų įvestos datos ir laiko praėjo:\n{years} metai,\n{months} mėnesiai,\n{days} dienos,\n{hours} valandos,\n"
+      f"{minutes} minutės ir\n{seconds} sekundės.")
 
