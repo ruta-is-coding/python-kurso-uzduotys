@@ -1,47 +1,34 @@
 # Sukurkite ir išsibandykite funkcijas, kurios:
 
 # 1. Gražintų trijų paduotų skaičių sumą:
-
-def sum_of_3 (num1: float, num2: float, num3: float) -> float:
+def sum_of_3 (num1, num2, num3):
     return num1 + num2 + num3
 
 print(sum_of_3(3,3,3.5))
 
 # 2. Gražintų paduoto sąrašo iš skaičių, sumą:
+sum_of_list = lambda numbers_list: sum(numbers_list)
 
-sum_of_list_items = lambda numbers_list: sum(numbers_list)
-
-print(sum_of_list_items([3,3,3.5]))
+print(sum_of_list([3,3,3.5]))
 
 # 3. Atspausdintų didžiausią iš kelių paduotų skaičių (panaudojant *args):
-
 def print_max(*args):
     print(max(args))
 
 print_max(4,10,25,0,2.5)
 
 # 4. Gražintų paduotą stringą atbulai:
-
 def reverse_string(string: str) -> str:
     return string[::-1]
 
 print(reverse_string("Labas"))
 
 # 5. Atspausdintų, kiek paduotame stringe yra žodžių, didžiųjų ir mažųjų raidžių, skaičių:
-
 def print_string_info(string: str):
     words = len(string.split())
-    digits = 0
-    lowercase_letters = 0
-    uppercase_letters = 0
-
-    for char in string:
-        if char.isdigit():
-            digits += 1
-        elif char.islower():
-            lowercase_letters += 1
-        elif char.isupper():
-            uppercase_letters += 1
+    digits = sum(char.isdigit() for char in string)
+    lowercase_letters = sum(char.islower() for char in string)
+    uppercase_letters = sum(char.isupper() for char in string)
 
     print(f"Your string has: {words} words, {digits} digits, "
           f"{lowercase_letters} lowercase letters, and {uppercase_letters} uppercase letters.")
@@ -59,7 +46,7 @@ print(unique_list_elements(["Hello","Hello",3,3,3,8,9]))
 def is_number_prime(number: float) -> bool:
     from math import sqrt
 
-    if number <= 0:
+    if number <= 1:
         return False
 
     for i in range(2, int(sqrt(number))+1):
@@ -72,18 +59,15 @@ def is_number_prime(number: float) -> bool:
 print(is_number_prime(5))
 
 # 8. Išrikiuotų paduoto stringo žodžius nuo paskutinio iki pirmojo:
-def sort_words_desc(string: str) -> list:
-    words = string.split()
-    return words[::-1]
+def reverse_words(string: str) -> str:
+    reversed_words = string.split()[::-1]
+    return " ".join(reversed_words)
 
-print(sort_words_desc("Hello Professor, you are amazing!"))
+print(reverse_words("Hello Professor, you are amazing!"))
 
 # 9. Gražina, ar paduoti metai yra keliamieji, ar ne:
 def is_year_leap(year: int) -> bool:
-    if year % 400 == 0 or (year % 100 != 0 and year % 4 == 0):
-        return True
-    else:
-        return False
+    return year % 400 == 0 or (year % 100 != 0 and year % 4 == 0)
 
 print(is_year_leap(1996))
 
