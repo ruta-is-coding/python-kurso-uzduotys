@@ -22,5 +22,4 @@ class Budget:
         print(f"The balance is: {format(balance, '.2f')}€\n")
 
     def show_report(self):
-        for record in self.journal:
-            print(record)
+        print(f"{self.journal}\n")

@@ -4,13 +4,10 @@ from datetime import datetime, timedelta
 # Sukurti klasę Sukaktis, kuri turėtų savybę data (galima atskirai įvesti metus, mėnesius ir kt.) ir metodus, kurie:
 class Anniversary:
     def __init__(self, year, month, day):
-        self.year = year
-        self.month = month
-        self.day = day
-        self.date = datetime(self.year, self.month, self.day)
+        self.date = datetime(year, month, day)
 
-    # Atspausdina, kiek nuo įvestos sukakties praėjo metų, savaičių, dienų, valandų, minučių, sekundžių
     def info(self):
+        """Prints how many years, weeks, days, hours, minutes, seconds have passed since the entered anniversary"""
         difference = datetime.today() - self.date
         days = difference.days
         hours = days * 24
@@ -18,11 +15,11 @@ class Anniversary:
         minutes = seconds // 60
         weeks = days // 7
         years = days // 365
-        print(f"Since the anniversary have passed: {years} years, {weeks} weeks, "
-              f"{days} days, {hours} hours, {minutes} minutes, {seconds} seconds")
+        print(f"Since the anniversary ({self.date.strftime("%Y-%m-%d")}) have passed: {years} years, {weeks} weeks, "
+              f"{days} days, {hours} hours, {minutes} minutes, {seconds} seconds.")
 
     def is_year_leap(self):
-        return isleap(self.year)
+        return isleap(self.date.year)
 
     def subtract_days(self, days):
         new_date = self.date - timedelta(days=days)

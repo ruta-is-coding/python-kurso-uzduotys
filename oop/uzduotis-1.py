@@ -2,7 +2,7 @@
 # Susikurti kelis klasės objektus ir išbandyti visus metodus
 
 class Sentence:
-    def __init__(self, text):
+    def __init__(self, text: str):
         self.text = text
 
     # Gražina tekstą atbulai
@@ -23,13 +23,8 @@ class Sentence:
         return words[sequence_no]
 
     # Gražina, kiek tekste yra nurodytų simbolių arba žodžių
-    def count_words_or_chars(self, words = True):
-        # Return the number of words
-        if words:
-            words = self.text.split()
-            return len(words)
-        # Return the number of characters
-        return len(self.text)
+    def count_word_or_char(self, searched_value):
+        return self.text.count(searched_value)
 
     # Gražina tekstą su pakeistu nurodytu žodžiu arba simboliu
     def replace(self, old_value, new_value):
@@ -49,5 +44,6 @@ class Sentence:
 sentence1 = Sentence("Labas rytas")
 sentence2 = Sentence("Code academy is cool")
 
+print(sentence1.count_word_or_char("Labas"))
 sentence1.info()
 sentence2.info()
