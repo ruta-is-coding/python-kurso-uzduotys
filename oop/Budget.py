@@ -22,4 +22,7 @@ class Budget:
         print(f"The balance is: {format(balance, '.2f')}€\n")
 
     def show_report(self):
-        print(f"{self.journal}\n")
+        if not self.journal:
+            print("No income/expense\n")
+        for item in self.journal:
+            print(item)

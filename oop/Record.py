@@ -3,5 +3,5 @@ class Record:
         self.record_type = record_type
         self.amount = amount
 
-    def __repr__(self):
-        return f"{self.record_type.capitalize()}: {format(self.amount, '.2f')}€"
+    def __str__(self):
+        return f"{self.record_type.capitalize()}: {format(self.amount, '.2f')}€\n"
