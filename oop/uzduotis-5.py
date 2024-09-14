@@ -1,4 +1,4 @@
-from Budget import Budget
+from budget import Budget
 
 my_bugdet = Budget()
 # Padaryti minibiudžeto programą, kuri:

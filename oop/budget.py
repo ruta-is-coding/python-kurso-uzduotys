@@ -1,4 +1,4 @@
-from Record import Record
+from record import Record
 
 class Budget:
     def __init__(self):
