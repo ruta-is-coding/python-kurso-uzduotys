@@ -6,9 +6,9 @@ mano_biudzetas = Biudzetas()
 while True:
     while True:
         try:
-            veiksmas = int(input("Pasirinkite veiksmą: \n1-pridėti pajamas (€), \n2-pridėti išlaidas (€), "
-                                 "\n3 - parodyti balansą, \n4 - parodyti biudžeto ataskaitą, "
-                                 "\n5 - išeiti iš programos\n"))
+            veiksmas = int(input("\nPasirinkite veiksmą: \n1-pridėti pajamas (€), \n2-pridėti išlaidas (€), "
+                                 "\n3-parodyti balansą, \n4-parodyti biudžeto ataskaitą, "
+                                 "\n5-išeiti iš programos\n"))
             break
         except ValueError:
             print("Netinkamas pasirinkimas! Bandykite dar kartą")

@@ -5,7 +5,7 @@ class Irasas:
     def __init__(self, suma):
         self.suma = suma
 
-# Iš jos PajamuIrasas ir IslaiduIrasas klasės turi paveldėti visas savybes.
+# Iš tėvinės klasės PajamuIrasas ir IslaiduIrasas turi paveldėti visas savybes.
 # Į klasę PajamuIrasas papildomai pridėti savybes siuntejas ir papildoma_informacija, kurias vartotojas galėtų įrašyti.
 class PajamuIrasas(Irasas):
     def __init__(self, suma, siuntejas, papildoma_informacija):

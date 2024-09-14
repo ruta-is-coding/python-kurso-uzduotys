@@ -2,9 +2,6 @@ from irasas import PajamuIrasas, IslaiduIrasas
 
 # Patobulinti objektinio programavimo 1 pamokos biudžeto programą:
 
-# Atitinkamai perdaryti klasės Biudzetas metodus gauti_balansa ir parodyti_ataskaita,
-# kad pasiėmus įrašą iš žurnalo, atpažintų, ar tai yra pajamos ar išlaidos (pvz., panaudojus isinstance() metodą)
-# ir atitinkamai atliktų veiksmus.
 class Biudzetas:
     def __init__(self):
         self.zurnalas = []
@@ -17,6 +14,9 @@ class Biudzetas:
         islaidos = IslaiduIrasas(suma, atsiskaitymo_budas, isigyta_preke_paslauga)
         self.zurnalas.append(islaidos)
 
+    # Atitinkamai perdaryti klasės Biudzetas metodus gauti_balansa ir parodyti_ataskaita,
+    # kad pasiėmus įrašą iš žurnalo, atpažintų, ar tai yra pajamos ar išlaidos (pvz., panaudojus isinstance() metodą)
+    # ir atitinkamai atliktų veiksmus.
     def gauti_balansa(self):
         balansas = 0
         for irasas in self.zurnalas:
